@@ -21,6 +21,15 @@ function insertItem($fruit_name,$quantity){
 
 }
 
+function deleteItem($fruit_name){
+	$pdo=new PDO('mysql:host=localhost;dbname=stock_list;charset=utf8mb4','root','root');
+	$stmt = $pdo->prepare("DELETE FROM fruits WHERE fruit_name=:fruit_name");
+	$stmt->bindValue(':fruit_name', $fruit_name, PDO::PARAM_STR);
+	$stmt->execute();
+	$affected_rows = $stmt->rowCount();
+	return $affected_rows;
+}
+
 
 
 

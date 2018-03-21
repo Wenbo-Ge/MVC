@@ -43,6 +43,19 @@ $all_items = getAllItems();
 		<input type="text" name="price">
 		<input type="submit" name="">
 	</form>
+	<h2>Scrollbar Style</h2>
+	<div style="width: 30vw;height:5rem;">
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+		adasdasdadsdasdasdasdsadasdasdsdasd
+	</div>
 </body>
 </html>
 
