@@ -30,13 +30,17 @@ function deleteItem($fruit_name){
 	return $affected_rows;
 }
 
-// function updateItem($quantity, $fruit_name){
-// 	$pdo=new PDO('mysql:host=localhost;dbname=stock_list;charset=utf8mb4','root','root');
-// 	$stmt = $pdo->prepare("UPDATE fruits SET quantity=$_POST['fruitQuantity'] WHERE fruit_name=$_POST['fruitName']");
-// 	$stmt->execute(array($quantity, $fruit_name));
-// 	$affected_rows = $stmt->rowCount();
-// 	return $affected_rows;
-// }
+function updateItem($quantity, $fruit_name){
+	$pdo=new PDO('mysql:host=localhost;dbname=stock_list;charset=utf8mb4','root','root');
+	$stmt = $pdo->prepare("UPDATE fruits SET quantity=:quantity WHERE fruit_name=:fruit_name");
+	$stmt->execute(array(
+		':quantity'=> $quantity, 
+		':fruit_name'=> $fruit_name
+		)
+	);
+	$affected_rows = $stmt->rowCount();
+	return $affected_rows;
+}
 
 
 

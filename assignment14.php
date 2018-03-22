@@ -10,11 +10,11 @@ if ($_POST['add']) {
 			deleteItem($fruitNameInForm);
 		} 
 		// 尝试写一个update的方法，但是失败了
-		// else if ($_POST['update']) {
-		// 	$fruitNameInForm=$_POST['fruitName'];
-		// 	$fruitQuantityInForm=$_POST['fruitQuantity'];
-		// 	update($fruitNameInForm,$fruitQuantityInForm);
-		// }
+		else if ($_POST['update']) {
+			$fruitNameInForm=$_POST['fruitName'];
+			$fruitQuantityInForm=$_POST['fruitQuantity'];
+			updateItem($fruitNameInForm,$fruitQuantityInForm);
+		}
 
 
 $getAll=getAll();
